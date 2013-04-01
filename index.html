@@ -4,7 +4,9 @@
   <meta charset="utf-8">
   <title>PaleoSpin</title>
   <link rel="stylesheet" type="text/css" href="css/paleospin.css" />
-  <script src="js/angular.min.js"></script>
+  <script src="lib/angular/angular.min.js"></script>
+  <script src="lib/jQuery/jquery-1.9.1.min.js"></script>
+  <script src="lib/jquery.slots/jquery.slots.js"></script>
   <script src="js/paleospin.js"></script>
   <script src="js/proteins.js"></script>
   <script src="js/veggies.js"></script>
@@ -13,46 +15,57 @@
   <script src="js/spices.js"></script>
 </head>
 <body>
+  <button id="spin">Spin</button>
   <div class="spin-container" ng-controller="SpinCtrl">
     <div class="spin-column">
       <h1>Proteins</h1>
-      <ul>
-        <li class="spin-item" ng-repeat="protein in proteins()">
-          {{protein}}
-        </li>
-      </ul>
+      <div class="spin-list">
+        <ul>
+          <li class="spin-item" ng-repeat="protein in proteins()">
+            {{protein}}
+          </li>
+        </ul>
+      </div>
     </div>
     <div class="spin-column">
       <h1>Vegetables</h1>
-      <ul>
-        <li class="spin-item" ng-repeat="veggie in veggies()">
-          {{veggie}}
-        </li>
-      </ul>
+      <div class="spin-list">
+        <ul>
+          <li class="spin-item" ng-repeat="veggie in veggies()">
+            {{veggie}}
+          </li>
+        </ul>
+      </div>
     </div>
     <div class="spin-column">
       <h1>Carbs</h1>
-      <ul>
-        <li class="spin-item" ng-repeat="carb in carbs()">
-          {{carb}}
-        </li>
-      </ul>
+      <div class="spin-list">
+        <ul>
+          <li class="spin-item" ng-repeat="carb in carbs()">
+            {{carb}}
+          </li>
+        </ul>
+      </div>
     </div>
     <div class="spin-column">
       <h1>Fats</h1>
-      <ul>
-        <li class="spin-item" ng-repeat="fat in fats()">
-          {{fat}}
-        </li>
-      </ul>
+      <div class="spin-list">
+        <ul>
+          <li class="spin-item" ng-repeat="fat in fats()">
+            {{fat}}
+          </li>
+        </ul>
+      </div>
     </div>
     <div class="spin-column">
       <h1>Herbs & Spices</h1>
-      <ul>
-        <li class="spin-item" ng-repeat="spice in spices()">
-          {{spice}}
-        </li>
-      </ul>
+      <div class="spin-list">
+        <ul>
+          <li class="spin-item" ng-repeat="spice in spices()">
+            {{spice}}
+          </li>
+        </ul>
+      </div>
     </div>
   </div>
 </body>

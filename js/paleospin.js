@@ -21,3 +21,9 @@ function SpinCtrl($scope) {
     return PaleoSpin.spices;
   }
 }
+
+$(function() {
+  $('.spin-list ul').slot({
+    spinButton: '#spin'
+  });
+});

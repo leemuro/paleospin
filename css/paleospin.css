@@ -33,3 +33,10 @@ body {
   border-bottom: solid 1px #888;
   padding: 5px 10px 5px 10px;
 }
+
+.spin-list {
+  overflow: hidden;
+  height: 24px;
+  display: inline-block;
+  position: relative;
+}
