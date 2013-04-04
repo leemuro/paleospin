@@ -1,42 +1,90 @@
 * { box-sizing: border-box; }
 
 body {
-  font-family: 'lucida grande';
+  font-family: 'Lucida Grande', Arial, sans-serif;
+  font-size: 14px;
 }
 
-.spin-container {
-  font-size: 0;
-  width: 800px;
-  margin: 0 auto;
-}
-.spin-column {
-  display: inline-block;
-  vertical-align: top;
-  width: 20%; 
-  font-size: 14px;
-  border: solid 1px #888;
-  margin-left: -1px;
-}
-.spin-column h1 {
-  font-size: 16px;
-  background-color: #eee;
-  margin: 0;
-  padding: 5px 10px 5px 10px;
-  border-bottom: solid 1px #888;
-}
-.spin-column ul {
-  list-style-type: none;
+body, ul {
   margin: 0;
   padding: 0;
 }
-.spin-item {
-  border-bottom: solid 1px #888;
-  padding: 5px 10px 5px 10px;
+
+.header {
+  text-align: center;
+  background-color: #EFECE7;
+  color: #4F4949;
+  font-size: 90px;
+  font-family: Arizonia, Georgia, serif;
+  font-weight: bold;
+  padding: 20px 0 40px 0;
 }
 
-.spin-list {
+.spinner-container {
+  background-color: #EFECE7;
+  padding-bottom: 20px;
+}
+.spinner {
+  margin: 0 auto;
+  border-spacing: 0;
+  border-spacing: 10px 0;
+}
+.spinner th {
+  text-transform: uppercase;
+  padding-bottom: 20px;
+  color: #ACA9A4;
+  font-weight: normal;
+}
+.spinner td {
+  vertical-align: top;
+  text-align: center;
+  padding: 0px 10px 0px 10px;
+  background-color: #F7F6F2;
+  border-radius: 10px;
+}
+
+.spinner-list-container {
+  height: 140px;
   overflow: hidden;
-  height: 24px;
-  display: inline-block;
   position: relative;
+  width: 130px;
+}
+.spinner-list {
+  list-style-type: none;
+  width: 130px;
+}
+.spinner-item {
+  padding: 60px 0px 60px 0px;
+  line-height: 20px;
+  color: #D95D29;
+  font-weight: bold;
+}
+
+.spinner-actions {
+  background-color: #EFECE7;
+  padding: 20px;
+  text-align: center;
+}
+.spin-button {
+  font-size: 14px;
+  background-color: #DA5C2A;
+  color: #FFFEFC;
+  border: none;
+  border-radius: 5px;
+  padding: 20px;
+  width: 200px;
+  cursor: pointer;
+}
+
+.about {
+  background-color: #4F4949;
+  min-height: 700px;
+}
+.about h1 {
+  margin: 0;
+  font-family: Arizonia, Georgia, serif;
+  font-size: 40px;
+  color: #FFFEFC;
+  text-align: center;
+  padding: 20px;
 }

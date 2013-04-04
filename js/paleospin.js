@@ -23,7 +23,7 @@ function SpinCtrl($scope) {
 }
 
 $(function() {
-  $('.spin-list ul').slot({
-    spinButton: '#spin'
+  $('.spinner-list').slot({
+    spinButton: '#spin-button'
   });
 });

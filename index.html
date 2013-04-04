@@ -3,6 +3,7 @@
 <head>
   <meta charset="utf-8">
   <title>PaleoSpin</title>
+  <link href='http://fonts.googleapis.com/css?family=Arizonia' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" type="text/css" href="css/paleospin.css" />
   <script src="lib/angular/angular.min.js"></script>
   <script src="lib/jQuery/jquery-1.9.1.min.js"></script>
@@ -15,58 +16,72 @@
   <script src="js/spices.js"></script>
 </head>
 <body>
-  <button id="spin">Spin</button>
-  <div class="spin-container" ng-controller="SpinCtrl">
-    <div class="spin-column">
-      <h1>Proteins</h1>
-      <div class="spin-list">
-        <ul>
-          <li class="spin-item" ng-repeat="protein in proteins()">
-            {{protein}}
-          </li>
-        </ul>
-      </div>
-    </div>
-    <div class="spin-column">
-      <h1>Vegetables</h1>
-      <div class="spin-list">
-        <ul>
-          <li class="spin-item" ng-repeat="veggie in veggies()">
-            {{veggie}}
-          </li>
-        </ul>
-      </div>
-    </div>
-    <div class="spin-column">
-      <h1>Carbs</h1>
-      <div class="spin-list">
-        <ul>
-          <li class="spin-item" ng-repeat="carb in carbs()">
-            {{carb}}
-          </li>
-        </ul>
-      </div>
-    </div>
-    <div class="spin-column">
-      <h1>Fats</h1>
-      <div class="spin-list">
-        <ul>
-          <li class="spin-item" ng-repeat="fat in fats()">
-            {{fat}}
-          </li>
-        </ul>
-      </div>
-    </div>
-    <div class="spin-column">
-      <h1>Herbs & Spices</h1>
-      <div class="spin-list">
-        <ul>
-          <li class="spin-item" ng-repeat="spice in spices()">
-            {{spice}}
-          </li>
-        </ul>
-      </div>
-    </div>
+  <div class="header">
+    PaleoSpin
+  </div>
+  <div class="spinner-container">
+    <table class="spinner" ng-controller="SpinCtrl">
+      <tr>
+        <th class="spinner-header">Proteins</th>
+        <th class="spinner-header">Vegetables</th>
+        <th class="spinner-header">Carbs</th>
+        <th class="spinner-header">Fats</th>
+        <th class="spinner-header">Herbs & Spices</th>
+      </tr>
+      <tr>
+        <td>
+          <div class="spinner-list-container">
+            <ul class="spinner-list">
+              <li class="spinner-item" ng-repeat="protein in proteins()">
+                {{protein}}
+              </li>
+            </ul>
+          </div>
+        </td>
+        <td>
+          <div class="spinner-list-container">
+            <ul class="spinner-list">
+              <li class="spinner-item" ng-repeat="veggie in veggies()">
+                {{veggie}}
+              </li>
+            </ul>
+          </div>
+        </td>
+        <td>
+          <div class="spinner-list-container">
+            <ul class="spinner-list">
+              <li class="spinner-item" ng-repeat="carb in carbs()">
+                {{carb}}
+              </li>
+            </ul>
+          </div>
+        </td>
+        <td>
+          <div class="spinner-list-container">
+            <ul class="spinner-list">
+              <li class="spinner-item" ng-repeat="fat in fats()">
+                {{fat}}
+              </li>
+            </ul>
+          </div>
+        </td>
+        <td>
+          <div class="spinner-list-container">
+            <ul class="spinner-list">
+              <li class="spinner-item" ng-repeat="spice in spices()">
+                {{spice}}
+              </li>
+            </ul>
+          </div>
+        </td>
+      </tr>
+    </table>
+  </div>
+  <div class="spinner-actions">
+    <button id="spin-button" class="spin-button">Spin</button>
+  </div>
+  <div class="about">
+    <h1>About PaleoSpin</h1>
   </div>
 </body>
 </html>
