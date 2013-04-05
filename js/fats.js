@@ -4,6 +4,7 @@ PaleoSpin.fats = [
   {name: 'Macadamia oil', enabled: true},
   {name: 'Avocado oil', enabled: true},
   {name: 'Lard', enabled: true},
-  {name: 'Ghee', enabled: true}
+  {name: 'Ghee', enabled: true},
+  {name: 'Grassfed Butter', enabled: true}
 ]
 
