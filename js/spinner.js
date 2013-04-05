@@ -9,7 +9,7 @@
       var itemHeight = $list.find('li').first().outerHeight();
 
       var spinning = false;
-      var spins = 10 + slotIndex;
+      var spins = 6 + (1.5 * slotIndex);
       var spinDuration = 0;
       var spinCount = 0;
 

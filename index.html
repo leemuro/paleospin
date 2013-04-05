@@ -5,22 +5,13 @@
   <title>PaleoSpin</title>
   <link href='http://fonts.googleapis.com/css?family=Arizonia' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" type="text/css" href="css/paleospin.css" />
-  <script src="lib/angular/angular.min.js"></script>
-  <script src="lib/jQuery/jquery-1.9.1.min.js"></script>
-  <script src="lib/jquery.slots/jquery.slots.js"></script>
-  <script src="js/paleospin.js"></script>
-  <script src="js/proteins.js"></script>
-  <script src="js/veggies.js"></script>
-  <script src="js/carbs.js"></script>
-  <script src="js/fats.js"></script>
-  <script src="js/spices.js"></script>
 </head>
 <body>
   <div class="header">
     PaleoSpin
   </div>
-  <div class="spinner-container">
-    <table class="spinner" ng-controller="SpinCtrl">
+  <div class="spinner">
+    <table class="spinner-table" ng-controller="SpinCtrl">
       <tr>
         <th class="spinner-header">Proteins</th>
         <th class="spinner-header">Vegetables</th>
@@ -77,11 +68,21 @@
       </tr>
     </table>
   </div>
-  <div class="spinner-actions">
+  <div class="actions">
     <button id="spin-button" class="spin-button">Spin</button>
   </div>
   <div class="about">
     <h1>About PaleoSpin</h1>
   </div>
+  <a href="https://github.com/leemuro/paleospin"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_gray_6d6d6d.png" alt="Fork me on GitHub"></a>
+  <script src="lib/angular.min.js"></script>
+  <script src="lib/jquery-1.9.1.min.js"></script>
+  <script src="js/paleospin.js"></script>
+  <script src="js/spinner.js"></script>
+  <script src="js/proteins.js"></script>
+  <script src="js/veggies.js"></script>
+  <script src="js/carbs.js"></script>
+  <script src="js/fats.js"></script>
+  <script src="js/spices.js"></script>
 </body>
 </html>
