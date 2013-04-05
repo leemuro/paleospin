@@ -42,6 +42,7 @@ body, ul {
   padding: 0px 10px 0px 10px;
   background-color: #F7F6F2;
   border-radius: 10px;
+  border: solid 3px #ACA9A4;
 }
 
 .spinner-list-container {
@@ -131,4 +132,7 @@ body, ul {
 }
 .about .contact {
   font-size: 14px;
+}
+.about .copyright {
+  font-size: 12px;
 }
