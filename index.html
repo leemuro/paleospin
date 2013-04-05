@@ -24,7 +24,7 @@
           <div class="spinner-list-container">
             <ul class="spinner-list">
               <li class="spinner-item" ng-repeat="protein in proteins()">
-                {{protein}}
+                {{protein.name}}
               </li>
             </ul>
           </div>
@@ -33,7 +33,7 @@
           <div class="spinner-list-container">
             <ul class="spinner-list">
               <li class="spinner-item" ng-repeat="veggie in veggies()">
-                {{veggie}}
+                {{veggie.name}}
               </li>
             </ul>
           </div>
@@ -42,7 +42,7 @@
           <div class="spinner-list-container">
             <ul class="spinner-list">
               <li class="spinner-item" ng-repeat="carb in carbs()">
-                {{carb}}
+                {{carb.name}}
               </li>
             </ul>
           </div>
@@ -51,7 +51,7 @@
           <div class="spinner-list-container">
             <ul class="spinner-list">
               <li class="spinner-item" ng-repeat="fat in fats()">
-                {{fat}}
+                {{fat.name}}
               </li>
             </ul>
           </div>
@@ -60,7 +60,7 @@
           <div class="spinner-list-container">
             <ul class="spinner-list">
               <li class="spinner-item" ng-repeat="spice in spices()">
-                {{spice}}
+                {{spice.name}}
               </li>
             </ul>
           </div>
@@ -70,6 +70,65 @@
   </div>
   <div class="actions">
     <button id="spin-button" class="spin-button">Spin</button>
+  </div>
+  <div class="settings" ng-controller="SettingsCtrl">
+    <h1>Turn On/Off Ingredients</h1> 
+    <table class="ingredients-table">
+      <tr>
+        <th class="ingredients-header">Proteins</th>
+        <th class="ingredients-header">Vegetables</th>
+        <th class="ingredients-header">Carbs</th>
+        <th class="ingredients-header">Fats</th>
+        <th class="ingredients-header">Herbs & Spices</th>
+      </tr>
+      <tr>
+        <td>
+          <ul class="ingredient-list">
+            <li ng-repeat="protein in proteins()">
+              <label>
+                <input class="ingredient-toggle spinner-reset" ng-checked="protein.enabled" ng-model="protein.enabled" type="checkbox" /> {{protein.name}}
+              </label>
+            </li>
+          </ul>
+        </td>
+        <td>
+          <ul class="ingredient-list">
+            <li ng-repeat="veggie in veggies()">
+              <label>
+                <input class="ingredient-toggle spinner-reset" ng-checked="veggie.enabled" ng-model="veggie.enabled" type="checkbox" /> {{veggie.name}}
+              </label>
+            </li>
+          </ul>
+        </td>
+        <td>
+          <ul class="ingredient-list">
+            <li ng-repeat="carb in carbs()">
+              <label>
+                <input class="ingredient-toggle spinner-reset" ng-checked="carb.enabled" ng-model="carb.enabled" type="checkbox" /> {{carb.name}}
+              </label>
+            </li>
+          </ul>
+        </td>
+        <td>
+          <ul class="ingredient-list">
+            <li ng-repeat="fat in fats()">
+              <label>
+                <input class="ingredient-toggle spinner-reset" ng-checked="fat.enabled" ng-model="fat.enabled" type="checkbox" /> {{fat.name}}
+              </label>
+            </li>
+          </ul>
+        </td>
+        <td>
+          <ul class="ingredient-list">
+            <li ng-repeat="spice in spices()">
+              <label>
+                <input class="ingredient-toggle spinner-rest" ng-checked="spice.enabled" ng-model="spice.enabled" type="checkbox" /> {{spice.name}}
+              </label>
+            </li>
+          </ul>
+        </td>
+      </tr>
+    </table>
   </div>
   <div class="about">
     <h1>About PaleoSpin</h1>
@@ -88,12 +147,13 @@
     <p>
       - Lee -
     </p>
-    <p>
+    <p class="contact">
       E-mail me at <a target="_blank" href="mailto:lee@leemuro.com">lee@leemuro.com</a> or follow me <a target="_blank" href="http://twitter.com/leemuro">@leemuro</a> on Twitter
     </p>
   </div>
   <a href="https://github.com/leemuro/paleospin"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_gray_6d6d6d.png" alt="Fork me on GitHub"></a>
   <script src="lib/angular.min.js"></script>
+  <script src="lib/underscore-min.js"></script>
   <script src="lib/jquery-1.9.1.min.js"></script>
   <script src="js/paleospin.js"></script>
   <script src="js/spinner.js"></script>

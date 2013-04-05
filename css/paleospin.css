@@ -3,6 +3,7 @@
 body {
   font-family: 'Lucida Grande', Arial, sans-serif;
   font-size: 14px;
+  background-color: #333;
 }
 
 body, ul {
@@ -76,14 +77,44 @@ body, ul {
   cursor: pointer;
 }
 
-.about {
+.settings {
+  padding: 20px;
   background-color: #4F4949;
-  min-height: 700px;
+}
+.settings h1 {
+  font-family: Lucida Grande;
+  font-size: 16px;
+  color: #FFFEFC;
+  text-align: center;
+}
+.ingredients-table {
+  margin: 0 auto;
+}
+.ingredients-table td {
+  vertical-align: top;
+  color: #fff;
+  line-height: 20px;
+  padding: 5px;
+}
+.ingredients-header {
+  text-transform: uppercase;
+  font-weight: normal;
+  text-align: left;
+  color: #ACA9A4;
+}
+.ingredient-list {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.about {
+  background-color: #333;
   text-align: center;
 }
 .about h1 {
   margin: 0;
-  font-family: Arizonia, Georgia, serif;
+  font-family: Arizonia, 'Times New Roman', serif;
   font-size: 40px;
   color: #FFFEFC;
   padding: 20px;
@@ -97,4 +128,7 @@ body, ul {
 }
 .about a {
   color: #DA5C2A;
+}
+.about .contact {
+  font-size: 14px;
 }

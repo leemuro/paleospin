@@ -2,6 +2,28 @@ var PaleoSpin = {}
 
 function SpinCtrl($scope) {
   $scope.proteins = function() {
+    return _.where(PaleoSpin.proteins, {enabled: true});
+  }
+
+  $scope.veggies = function() {
+    return _.where(PaleoSpin.veggies, {enabled: true});
+  }
+
+  $scope.carbs = function() {
+    return _.where(PaleoSpin.carbs, {enabled: true});
+  }
+
+  $scope.fats = function() {
+    return _.where(PaleoSpin.fats, {enabled: true});
+  }
+
+  $scope.spices = function() {
+    return _.where(PaleoSpin.spices, {enabled: true});
+  }
+}
+
+function SettingsCtrl($scope) {
+  $scope.proteins = function() {
     return PaleoSpin.proteins;
   }
 
@@ -24,6 +46,7 @@ function SpinCtrl($scope) {
 
 $(function() {
   $('.spinner-list').slot({
-    spinButton: '#spin-button'
+    spinButton: '#spin-button',
+    resets: '.spinner-reset'
   });
 });

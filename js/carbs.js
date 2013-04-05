@@ -1,8 +1,8 @@
 PaleoSpin.carbs = [
-  'Beets',
-  'Acorn Squash',
-  'Butternut Squash',
-  'Yam',
-  'Sweet Potato'
+  {name: 'Beets', enabled: true},
+  {name: 'Acorn Squash', enabled: true},
+  {name: 'Butternut Squash', enabled: true},
+  {name: 'Yam', enabled: true},
+  {name: 'Sweet Potato', enabled: true}
 ]
 

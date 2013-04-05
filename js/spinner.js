@@ -4,19 +4,22 @@
     $(this).each(function() {
       slotIndex++;
       var $list = $(this);
-      var listHeight = $list.outerHeight();
-      var itemCount = $list.find('li').length;
-      var itemHeight = $list.find('li').first().outerHeight();
 
       var spinning = false;
       var spins = 6 + (1.5 * slotIndex);
       var spinDuration = 0;
       var spinCount = 0;
 
+      var listHeight, itemCount, itemHeight;
+
       $list.css('position', 'absolute');
 
       function spin() {
+        itemCount = $list.find('li').length;
+        if(itemCount <= 1) return;
         spinning = true;
+        listHeight = $list.outerHeight();
+        itemHeight = $list.find('li').first().outerHeight();
         $list.css('top', -listHeight)
           .animate({'top': '0px'}, spinDuration, 'linear', function() {
             spinCount++;
@@ -38,9 +41,17 @@
           });
       }
 
+      function reset() {
+        $list.css('top', 0);
+      }
+
       $(options.spinButton).click(function() {
         if(!spinning)
           spin();
+      });
+
+      $(options.resets).click(function() {
+        reset();
       });
     })
   }
