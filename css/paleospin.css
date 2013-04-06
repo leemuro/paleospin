@@ -11,7 +11,7 @@ body, ul {
   padding: 0;
 }
 
-.header, .spinner {
+.top {
   background-color: #EFECE7;
   text-align: center;
 }

@@ -7,69 +7,71 @@
   <link rel="stylesheet" type="text/css" href="css/paleospin.css" />
 </head>
 <body>
-  <div class="header">
-    PaleoSpin
-  </div>
-  <div class="spinner">
-    <table class="spinner-table" ng-controller="SpinCtrl">
-      <tr>
-        <th class="spinner-header">Proteins</th>
-        <th class="spinner-header">Vegetables</th>
-        <th class="spinner-header">Carbs</th>
-        <th class="spinner-header">Fats</th>
-        <th class="spinner-header">Herbs & Spices</th>
-      </tr>
-      <tr>
-        <td>
-          <div class="spinner-list-container">
-            <ul class="spinner-list">
-              <li class="spinner-item" ng-repeat="protein in proteins()">
-                {{protein.name}}
-              </li>
-            </ul>
-          </div>
-        </td>
-        <td>
-          <div class="spinner-list-container">
-            <ul class="spinner-list">
-              <li class="spinner-item" ng-repeat="veggie in veggies()">
-                {{veggie.name}}
-              </li>
-            </ul>
-          </div>
-        </td>
-        <td>
-          <div class="spinner-list-container">
-            <ul class="spinner-list">
-              <li class="spinner-item" ng-repeat="carb in carbs()">
-                {{carb.name}}
-              </li>
-            </ul>
-          </div>
-        </td>
-        <td>
-          <div class="spinner-list-container">
-            <ul class="spinner-list">
-              <li class="spinner-item" ng-repeat="fat in fats()">
-                {{fat.name}}
-              </li>
-            </ul>
-          </div>
-        </td>
-        <td>
-          <div class="spinner-list-container">
-            <ul class="spinner-list">
-              <li class="spinner-item" ng-repeat="spice in spices()">
-                {{spice.name}}
-              </li>
-            </ul>
-          </div>
-        </td>
-      </tr>
-    </table>
-  </div>
-  <div class="actions">
-    <button id="spin-button" class="spin-button">Spin</button>
+  <div class="top">
+    <div class="header">
+      PaleoSpin
+    </div>
+    <div class="spinner">
+      <table class="spinner-table" ng-controller="SpinCtrl">
+        <tr>
+          <th class="spinner-header">Proteins</th>
+          <th class="spinner-header">Vegetables</th>
+          <th class="spinner-header">Carbs</th>
+          <th class="spinner-header">Fats</th>
+          <th class="spinner-header">Herbs & Spices</th>
+        </tr>
+        <tr>
+          <td>
+            <div class="spinner-list-container">
+              <ul class="spinner-list">
+                <li class="spinner-item" ng-repeat="protein in proteins()">
+                  {{protein.name}}
+                </li>
+              </ul>
+            </div>
+          </td>
+          <td>
+            <div class="spinner-list-container">
+              <ul class="spinner-list">
+                <li class="spinner-item" ng-repeat="veggie in veggies()">
+                  {{veggie.name}}
+                </li>
+              </ul>
+            </div>
+          </td>
+          <td>
+            <div class="spinner-list-container">
+              <ul class="spinner-list">
+                <li class="spinner-item" ng-repeat="carb in carbs()">
+                  {{carb.name}}
+                </li>
+              </ul>
+            </div>
+          </td>
+          <td>
+            <div class="spinner-list-container">
+              <ul class="spinner-list">
+                <li class="spinner-item" ng-repeat="fat in fats()">
+                  {{fat.name}}
+                </li>
+              </ul>
+            </div>
+          </td>
+          <td>
+            <div class="spinner-list-container">
+              <ul class="spinner-list">
+                <li class="spinner-item" ng-repeat="spice in spices()">
+                  {{spice.name}}
+                </li>
+              </ul>
+            </div>
+          </td>
+        </tr>
+      </table>
+    </div>
+    <div class="actions">
+      <button id="spin-button" class="spin-button">Spin</button>
+    </div>
   </div>
   <div class="settings" ng-controller="SettingsCtrl">
     <h1>Turn On/Off Ingredients</h1> 
