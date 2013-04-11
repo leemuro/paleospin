@@ -84,9 +84,24 @@ body, ul {
 }
 .settings h1 {
   font-family: Lucida Grande;
-  font-size: 16px;
+  font-size: 18px;
   color: #FFFEFC;
   text-align: center;
+}
+.settings-exclusions {
+  text-align: center;
+  color: #FFFEFC;
+  margin: 0 0 10px 0;
+}
+.settings-exclusions input {
+  margin-right: 5px;
+  margin-left: 10px;
+}
+.settings-exclusions h2 {
+  font-size: 14px;
+  text-transform: uppercase;
+  font-weight: normal;
+  color: #ACA9A4;
 }
 .ingredients-table {
   margin: 0 auto;
