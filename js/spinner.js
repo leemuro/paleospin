@@ -6,13 +6,21 @@
       var $list = $(this);
 
       var spinning = false;
-      var spins = 6 + (1.5 * slotIndex);
+      var spins = 4 + (1.5 * slotIndex);
       var spinDuration = 0;
       var spinCount = 0;
 
       var listHeight, itemCount, itemHeight;
 
       $list.css('position', 'absolute');
+
+      function start() {
+        if(!spinning) {
+          spinDuration = 0;
+          spinCount = 0;
+          spin();
+        }
+      }
 
       function spin() {
         itemCount = $list.find('li').length;
@@ -46,8 +54,7 @@
       }
 
       $(options.spinButton).click(function() {
-        if(!spinning)
-          spin();
+        start();
       });
 
       $(options.resets).click(function() {
