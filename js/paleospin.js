@@ -64,6 +64,13 @@ function SettingsCtrl($scope) {
     _.each(foods, function(f) { setFoodExclusion(f, $scope.goitrogensExcluded); });
   }
 
+  $scope.seafoodExcluded = false;
+  $scope.excludeSeafood = function() {
+    $scope.seafoodExcluded = !$scope.seafoodExcluded;
+    var foods = _.where(PaleoSpin.allFoods, {seafood: true})
+    _.each(foods, function(f) { setFoodExclusion(f, $scope.seafoodExcluded); });
+  }
+
   function setFoodExclusion(food, isExcluded) {
     food.excludedCount += isExcluded ? 1 : -1;
     food.enabled = food.excludedCount == 0;
