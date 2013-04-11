@@ -80,6 +80,9 @@ function SettingsCtrl($scope) {
 $(function() {
   PaleoSpin.initFoods();
 
+  $('.spinner-item').show();
+  $('.ingredient-list').show();
+
   $('.spinner-list').slot({
     spinButton: '#spin-button',
     resets: '.spinner-reset'

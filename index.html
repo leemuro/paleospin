@@ -23,7 +23,7 @@
           <td>
             <div class="spinner-list-container">
               <ul class="spinner-list">
-                <li class="spinner-item" ng-repeat="protein in proteins()">
+                <li class="spinner-item" ng-repeat="protein in proteins()" style="display: none">
                   {{protein.name}}
                 </li>
               </ul>
@@ -32,7 +32,7 @@
           <td>
             <div class="spinner-list-container">
               <ul class="spinner-list">
-                <li class="spinner-item" ng-repeat="veggie in veggies()">
+                <li class="spinner-item" ng-repeat="veggie in veggies()" style="display: none">
                   {{veggie.name}}
                 </li>
               </ul>
@@ -41,7 +41,7 @@
           <td>
             <div class="spinner-list-container">
               <ul class="spinner-list">
-                <li class="spinner-item" ng-repeat="fat in fats()">
+                <li class="spinner-item" ng-repeat="fat in fats()" style="display: none">
                   {{fat.name}}
                 </li>
               </ul>
@@ -50,7 +50,7 @@
           <td>
             <div class="spinner-list-container">
               <ul class="spinner-list">
-                <li class="spinner-item" ng-repeat="spice in spices()">
+                <li class="spinner-item" ng-repeat="spice in spices()" style="display: none">
                   {{spice.name}}
                 </li>
               </ul>
@@ -82,7 +82,7 @@
       </tr>
       <tr>
         <td>
-          <ul class="ingredient-list">
+          <ul class="ingredient-list" style="display: none">
             <li ng-repeat="protein in proteins()">
               <label>
                 <input class="ingredient-toggle spinner-reset" ng-checked="protein.enabled" ng-model="protein.enabled" type="checkbox" /> {{protein.name}}
@@ -91,7 +91,7 @@
           </ul>
         </td>
         <td>
-          <ul class="ingredient-list">
+          <ul class="ingredient-list" style="display: none">
             <li ng-repeat="veggie in veggies()">
               <label>
                 <input class="ingredient-toggle spinner-reset" ng-checked="veggie.enabled" ng-model="veggie.enabled" type="checkbox" /> {{veggie.name}}
@@ -100,7 +100,7 @@
           </ul>
         </td>
         <td>
-          <ul class="ingredient-list">
+          <ul class="ingredient-list" style="display: none">
             <li ng-repeat="fat in fats()">
               <label>
                 <input class="ingredient-toggle spinner-reset" ng-checked="fat.enabled" ng-model="fat.enabled" type="checkbox" /> {{fat.name}}
@@ -109,7 +109,7 @@
           </ul>
         </td>
         <td>
-          <ul class="ingredient-list">
+          <ul class="ingredient-list" style="display: none">
             <li ng-repeat="spice in spices()">
               <label>
                 <input class="ingredient-toggle spinner-rest" ng-checked="spice.enabled" ng-model="spice.enabled" type="checkbox" /> {{spice.name}}
