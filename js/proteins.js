@@ -34,7 +34,7 @@ PaleoSpin.proteins = [
   {name: 'Shrimp', enabled: true},
   {name: 'Snapper', enabled: true},
   {name: 'Steak, ribeye', enabled: true},
-  {name: 'Steak, new york strip', enabled: true},
+  {name: 'Steak, strip', enabled: true},
   {name: 'Steak, t-bone', enabled: true},
   {name: 'Turkey', enabled: true},
   {name: 'Tuna', enabled: true},
